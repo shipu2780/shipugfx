@@ -1,0 +1,26 @@
+[hidden]{display:none!important}
+.admin h1{font-size:34px;letter-spacing:-.05em;margin:0 0 10px}
+.admin-bar{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.admin-actions{display:flex;gap:10px}
+.admin main{padding-bottom:70px}
+.login{max-width:440px;margin:60px auto;padding:clamp(24px,5vw,38px);border-radius:26px}
+.login p{color:var(--muted);font-size:13px;line-height:1.7}
+.login form{display:grid;gap:15px;margin-top:20px}
+.dash{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px;align-items:start}
+.field input[type=color]{padding:4px;min-height:47px;cursor:pointer}
+.field input[type=file]{padding:10px}
+.field.check{justify-content:end}.field.check label{display:flex;align-items:center;gap:9px;font-size:12px}
+.field.check input{width:18px;min-height:0;accent-color:var(--lime)}
+.preview{margin-top:18px}.preview .logo-tile{height:170px;border-radius:14px;border:1px solid var(--line)}
+.msg{min-height:1.4em;margin:14px 0 0;font-size:12px;color:var(--lime)}.msg.err{color:#ff9d9d}
+.count{font:11px 'DM Mono',monospace;color:var(--muted);margin-left:6px}
+.plist{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.pitem{display:grid;grid-template-columns:72px minmax(0,1fr);gap:13px;align-items:center;padding:11px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
+.pitem.editing{border-color:rgba(199,243,107,.6)}
+.thumb{width:72px;height:56px;border-radius:10px;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line)}
+.thumb img{max-width:100%;max-height:100%;object-fit:contain}
+.pmeta{min-width:0}.pmeta strong{display:block;font-size:14px;overflow-wrap:anywhere}.pmeta span{display:block;font-size:11px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}
+.pbtns{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap}
+.pbtns button{font:inherit;font-size:11px;font-weight:700;color:var(--text);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}
+.pbtns button:hover{border-color:rgba(199,243,107,.5)}.pbtns .danger:hover{border-color:#ff9d9d;color:#ff9d9d}
+@media(max-width:900px){.dash{grid-template-columns:minmax(0,1fr)}}

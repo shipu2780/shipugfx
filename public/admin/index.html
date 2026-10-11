@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#090b12">
+<title>Admin — Shipu</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="admin">
+<header class="wrap admin-bar">
+  <a class="brand" href="/">shipu<span>.</span></a>
+  <div class="admin-actions">
+    <a class="btn secondary" href="/" target="_blank" rel="noopener">View site</a>
+    <button class="btn secondary" id="logout" type="button" hidden>Sign out</button>
+  </div>
+</header>
+<main class="wrap">
+  <section class="login glass" id="loginView" hidden aria-labelledby="loginTitle">
+    <h1 id="loginTitle">Admin sign in</h1>
+    <p>Sign in to add and edit the projects shown on your portfolio.</p>
+    <form id="loginForm">
+      <div class="field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" required></div>
+      <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required></div>
+      <button class="btn primary" type="submit">Sign in</button>
+      <p class="msg" id="loginMsg" role="alert"></p>
+    </form>
+  </section>
+
+  <div class="dash" id="dash" hidden>
+    <section class="panel glass" aria-labelledby="formTitle">
+      <h2 id="formTitle">Add a project</h2>
+      <form id="projForm" novalidate>
+        <div class="form-grid">
+          <div class="field full"><label for="f-name">Project name *</label><input id="f-name" maxlength="80" required></div>
+          <div class="field"><label for="f-location">Location</label><input id="f-location" maxlength="80" placeholder="City, Country"></div>
+          <div class="field"><label for="f-role">Your role</label><input id="f-role" maxlength="100" placeholder="Social Media Manager"></div>
+          <div class="field full"><label for="f-desc">Short description</label><textarea id="f-desc" maxlength="220" placeholder="One or two sentences about the work (optional)"></textarea></div>
+          <div class="field full"><label for="f-link">Website</label><input id="f-link" type="url" maxlength="300" placeholder="https://example.com (optional)"></div>
+          <div class="field full"><label for="f-logo">Logo image *</label><input id="f-logo" type="file" accept="image/png,image/jpeg,image/webp,image/gif"><span class="hint" id="logoHint">PNG, JPG, WebP or GIF. Large images are resized in your browser before upload.</span></div>
+          <div class="field"><label for="f-tile">Logo background</label><input id="f-tile" type="color" value="#ffffff"><span class="hint">Match the colour behind your logo.</span></div>
+          <div class="field"><label for="f-cap">Max logo width (px)</label><input id="f-cap" type="number" min="40" max="1200" placeholder="Optional"><span class="hint">Set this for small files so they stay sharp.</span></div>
+          <div class="field"><label for="f-size">Card size</label><select id="f-size"><option value="">Normal</option><option value="wide-lg">Wide on desktop</option><option value="wide">Wide on tablet and desktop</option></select></div>
+          <div class="field check"><label><input id="f-flush" type="checkbox"> Fill the whole tile</label><span class="hint">For artwork that already has its own background.</span></div>
+        </div>
+        <div class="preview" id="preview" hidden><div class="logo-tile" id="pvTile"><img id="pvImg" alt="Logo preview"></div></div>
+        <div class="submit-row">
+          <button class="btn primary" id="saveBtn" type="submit">Save project</button>
+          <button class="btn secondary" id="cancelBtn" type="button" hidden>Cancel edit</button>
+        </div>
+        <p class="msg" id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel glass" aria-labelledby="listTitle">
+      <h2 id="listTitle">Your projects <span class="count" id="count"></span></h2>
+      <p class="hint">Order here is the order on your homepage.</p>
+      <ol class="plist" id="list"></ol>
+    </section>
+  </div>
+</main>
+<script src="/admin/admin.js" defer></script>
+</body>
+</html>

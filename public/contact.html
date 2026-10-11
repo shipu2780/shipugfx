@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b12">
+<title>Contact &amp; booking — Shipu</title>
+<meta name="description" content="Send Shipu a project enquiry or request a consultation about digital marketing, social media, web design, AI agents and booking systems.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact &amp; booking — Shipu">
+<meta property="og:description" content="Send Shipu a project enquiry or request a consultation about digital marketing, social media, web design, AI agents and booking systems.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap nav-inner">
+<a class="brand" href="index.html#home" aria-label="Shipu home">shipu<span>.</span></a>
+<nav class="navlinks" id="navlinks" aria-label="Main"><a href="index.html#services">Services</a><a href="index.html#work">Work</a><a href="index.html#about">About &amp; education</a><a href="contact.html" aria-current="page">Contact</a></nav>
+<a class="nav-cta" href="contact.html#booking">Book a call <span class="arrow" aria-hidden="true">&#8599;</span></a><button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">&#9776;</button>
+</div></header>
+<main id="main">
+    <section class="page-hero"><div class="wrap"><div class="mono">CONTACT / PROJECT ENQUIRIES</div><h1>Tell me what<br>you want to <span class="accent">build.</span></h1><p>Share a little about your business, challenge, or idea. Use the project enquiry form for general questions, or request a consultation in the booking section. I’ll use your details to understand what you need and follow up through your preferred contact method.</p></div></section>
+    <div class="wrap layout">
+      <section class="panel glass" id="enquiry"><div class="mono">01 / General enquiry</div><h2>What can I help with?</h2><p>Use this form for a new project, collaboration, or service question.</p>
+        <form name="project-enquiry" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="project-enquiry"><p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
+          <div class="form-grid">
+            <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div>
+            <div class="field"><label for="business">Business / brand</label><input id="business" name="business" autocomplete="organization" placeholder="Company or brand"></div>
+            <div class="field"><label for="contact-method">Preferred contact method *</label><select id="contact-method" name="preferred-contact" required><option value="">Choose one</option><option>Email</option><option>WhatsApp</option><option>Phone call</option><option>LinkedIn</option></select></div>
+            <div class="field"><label for="contact-detail">Contact detail *</label><input id="contact-detail" name="contact-detail" required placeholder="Email, phone, or profile link"></div>
+            <div class="field"><label for="service">Service you’re interested in *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Digital marketing</option><option>Social media management</option><option>Marketing strategy</option><option>Website design</option><option>SEO</option><option>AI agent / automation</option><option>Booking / enquiry system</option><option>Video editing / creative content</option><option>Project management</option><option>Not sure yet</option></select></div>
+            <div class="field"><label for="budget">Estimated budget</label><select id="budget" name="budget"><option value="">Select range (optional)</option><option>Under $150</option><option>$150–$300</option><option>$300–$750</option><option>$750+</option><option>Need advice</option></select></div>
+            <div class="field full"><label for="project">Tell me about your project *</label><textarea id="project" name="project-details" required placeholder="Your goals, what you need, timeline, and any useful links..."></textarea></div>
+          </div>
+          <div class="submit-row"><button class="btn primary" type="submit">Send enquiry ↗</button><span class="hint">I’ll reply using the contact method you choose.</span></div>
+        </form>
+      </section>
+      <section class="panel glass" id="booking"><div class="mono">02 / Consultation booking</div><h2>Let’s find a time.</h2><p>Request a consultation by sharing your preferred date and time. This is a booking request, not an instant calendar confirmation. I’ll follow up using your chosen contact method to confirm the slot.</p>
+        <form name="consultation-booking" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field-booking">
+          <input type="hidden" name="form-name" value="consultation-booking"><p hidden><label>Leave this field empty: <input name="bot-field-booking"></label></p>
+          <div class="form-grid">
+            <div class="field"><label for="book-name">Your name *</label><input id="book-name" name="name" autocomplete="name" required placeholder="Full name"></div>
+            <div class="field"><label for="book-contact">Email or WhatsApp *</label><input id="book-contact" name="contact-detail" required placeholder="Where should I confirm?"></div>
+            <div class="field"><label for="book-date">Preferred date *</label><input id="book-date" name="preferred-date" type="date" required></div>
+            <div class="field"><label for="book-time">Preferred time *</label><input id="book-time" name="preferred-time" type="time" required></div>
+            <div class="field"><label for="timezone">Your time zone *</label><select id="timezone" name="time-zone" required><option value="">Choose one</option><option>Bangladesh (UTC+6)</option><option>United Kingdom</option><option>United States - Eastern</option><option>United States - Central</option><option>United States - Mountain</option><option>United States - Pacific</option><option>Other / please ask me</option></select></div>
+            <div class="field"><label for="meeting-type">Meeting type *</label><select id="meeting-type" name="meeting-type" required><option value="">Choose one</option><option>Project discovery</option><option>Digital marketing consultation</option><option>Website / AI agent discussion</option><option>Project update</option></select></div>
+            <div class="field full"><label for="agenda">What would you like to discuss?</label><textarea id="agenda" name="agenda" placeholder="A short agenda helps me prepare..."></textarea></div>
+          </div>
+          <div class="submit-row"><button class="btn primary" type="submit">Request booking ↗</button><span class="hint">Your time is not reserved until I confirm it with you.</span></div>
+        </form>
+      </section>
+      <aside class="panel glass booking"><div class="booking-intro"><div class="mono">03 / What happens next</div><h2>A clear next step.</h2><p>Once your message arrives, I’ll review the requirements and get back to you through the contact method you provided.</p><div class="booking-points"><div class="booking-point"><span>01</span> I review your goals and scope.</div><div class="booking-point"><span>02</span> We clarify priorities and expectations.</div><div class="booking-point"><span>03</span> If it’s a fit, we agree on next steps.</div></div></div><div><div class="mono">Prefer to connect professionally?</div><h2>Find me on LinkedIn</h2><p>For professional updates and networking, you can also connect on LinkedIn.</p><a class="btn primary" href="https://www.linkedin.com/in/ariful-islam-shipu" target="_blank" rel="noreferrer">Open LinkedIn ↗</a></div></aside>
+    </div>
+  </main>
+<footer class="footer"><div class="wrap footer-inner"><span>&copy; <span id="year">2026</span> Shipu. Made with intent.</span><span>Dhaka, Bangladesh &middot; Available for remote projects</span><a class="backtop" href="index.html">Back to portfolio &uarr;</a></div></footer>
+<script src="main.js" defer></script>
+<script src="contact.js" defer></script>
+</body>
+</html>
