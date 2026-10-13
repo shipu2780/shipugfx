@@ -31,3 +31,9 @@ Redeploy after saving the variables. Then open `https://your-site/admin/` and si
 - One admin account. Sign-in has a short delay after wrong attempts but no lockout, so use a strong password.
 - Contact forms still use Netlify Forms (see Forms in the dashboard after the first deploy).
 - Test locally with `netlify dev` (needs `npm install` first).
+
+## HubSpot
+Every contact or booking form is copied into HubSpot by `netlify/functions/submission-created.mjs`. It creates or updates the contact (matched by email) and adds a note with the details.
+1. In HubSpot: Settings > Integrations > Private Apps (may be called Service keys) > Create. Give it the scopes `crm.objects.contacts.read` and `crm.objects.contacts.write`, then copy the access token.
+2. In Netlify add the variable `HUBSPOT_ACCESS_TOKEN` (tick Contains secret values), then redeploy.
+3. Without the token, forms still work and are saved in Netlify only.
