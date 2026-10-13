@@ -30,10 +30,10 @@
         <form name="project-enquiry" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="project-enquiry"><p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
           <div class="form-grid">
-            <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div>
+            <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
             <div class="field"><label for="business">Business / brand</label><input id="business" name="business" autocomplete="organization" placeholder="Company or brand"></div>
             <div class="field"><label for="contact-method">Preferred contact method *</label><select id="contact-method" name="preferred-contact" required><option value="">Choose one</option><option>Email</option><option>WhatsApp</option><option>Phone call</option><option>LinkedIn</option></select></div>
-            <div class="field"><label for="contact-detail">Contact detail *</label><input id="contact-detail" name="contact-detail" required placeholder="Email, phone, or profile link"></div>
+            <div class="field"><label for="contact-detail">WhatsApp, phone or profile link</label><input id="contact-detail" name="contact-detail" placeholder="Only if you prefer these"></div>
             <div class="field"><label for="service">Service you’re interested in *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Digital marketing</option><option>Social media management</option><option>Marketing strategy</option><option>Website design</option><option>SEO</option><option>AI agent / automation</option><option>Booking / enquiry system</option><option>Video editing / creative content</option><option>Project management</option><option>Not sure yet</option></select></div>
             <div class="field"><label for="budget">Estimated budget</label><select id="budget" name="budget"><option value="">Select range (optional)</option><option>Under $150</option><option>$150–$300</option><option>$300–$750</option><option>$750+</option><option>Need advice</option></select></div>
             <div class="field full"><label for="project">Tell me about your project *</label><textarea id="project" name="project-details" required placeholder="Your goals, what you need, timeline, and any useful links..."></textarea></div>
@@ -45,8 +45,8 @@
         <form name="consultation-booking" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field-booking">
           <input type="hidden" name="form-name" value="consultation-booking"><p hidden><label>Leave this field empty: <input name="bot-field-booking"></label></p>
           <div class="form-grid">
-            <div class="field"><label for="book-name">Your name *</label><input id="book-name" name="name" autocomplete="name" required placeholder="Full name"></div>
-            <div class="field"><label for="book-contact">Email or WhatsApp *</label><input id="book-contact" name="contact-detail" required placeholder="Where should I confirm?"></div>
+            <div class="field"><label for="book-name">Your name *</label><input id="book-name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="book-email">Email *</label><input id="book-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
+            <div class="field"><label for="book-contact">WhatsApp or phone</label><input id="book-contact" name="contact-detail" placeholder="Optional"></div>
             <div class="field"><label for="book-date">Preferred date *</label><input id="book-date" name="preferred-date" type="date" required></div>
             <div class="field"><label for="book-time">Preferred time *</label><input id="book-time" name="preferred-time" type="time" required></div>
             <div class="field"><label for="timezone">Your time zone *</label><select id="timezone" name="time-zone" required><option value="">Choose one</option><option>Bangladesh (UTC+6)</option><option>United Kingdom</option><option>United States - Eastern</option><option>United States - Central</option><option>United States - Mountain</option><option>United States - Pacific</option><option>Other / please ask me</option></select></div>
